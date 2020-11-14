@@ -38,7 +38,7 @@ EXPOSE 8080
 # Can't use form above as variables don't get injected.
 # ENTRYPOINT exec ./startup.sh ${APPNAME} ${ADMINUSER} ${PASSWORD}
 # Directly referencing the variables in Bash now
-ENTRYPOINT ["./startup.sh"]
+ENTRYPOINT ["sh","./startup.sh"]
 
 # Needed because gunicorn doesn't execute in the correct environment
 # CMD ["./startup.sh"]
